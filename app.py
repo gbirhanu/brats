@@ -22,7 +22,7 @@ CROP_PARAMS = ((56, 184), (56, 184), (13, 141))  # y, x, z cropping
 @st.cache_resource
 def load_default_model():
     try:
-        model = load_model("default_model.keras", compile=False)
+        model = load_model("model.keras", compile=False)
         return model
     except Exception as e:
         st.error(f"Failed to load default model: {str(e)}")
